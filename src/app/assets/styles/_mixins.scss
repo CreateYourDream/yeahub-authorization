@@ -1,0 +1,125 @@
+@mixin sm {
+    @media (min-width: #{$breakpoint-sm}) { @content; }
+} 
+
+@mixin md {
+    @media (min-width: #{$breakpoint-md}) { @content; }
+}
+
+@mixin lg {
+    @media (min-width: #{$breakpoint-lg}) { @content; }
+}
+
+@mixin xl {
+    @media (min-width: #{$breakpoint-xl}) { @content; }
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (min-width: #{$breakpoint-sm}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==md {
+        @media (min-width: #{$breakpoint-md}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==lg {
+        @media (min-width: #{$breakpoint-lg}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==xl {
+        @media (min-width: #{$breakpoint-xl}) {
+            @content;
+        }
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin text-multiline-truncate($lines: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin button-reset {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+
+}
+
+@mixin input-placeholder {
+    &::placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
