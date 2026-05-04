@@ -1,0 +1,21 @@
+.home {
+  height: 100%;
+  border-radius: $radius-lg;
+  padding: 20px 8px;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: $font-medium;
+  color: $black-900;
+}
+
+.subtitle {
+  margin-top: 24vh;
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $black-300;
+  text-align: center;
+  line-height: $line-base;
+}
