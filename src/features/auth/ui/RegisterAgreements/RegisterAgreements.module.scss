@@ -1,0 +1,41 @@
+.root {
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: $black-500;
+  font-size: $font-sm;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: $purple-700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox:disabled {
+  cursor: not-allowed;
+}
+
+.text {
+  line-height: 1.4;
+}
+
+.link {
+  color: $purple-700;
+  text-decoration: none;
+}
+
+.error {
+  margin-top: 6px;
+}

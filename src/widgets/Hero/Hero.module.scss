@@ -1,0 +1,49 @@
+.hero {
+  color: $white-900;
+  padding-block: 70px;
+  height: 100%;
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include lg {
+    display: flex;
+  }
+}
+
+.title {
+  font-size: $font-base;
+  font-weight: $font-light;
+  line-height: $line-tight;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.subtitle {
+  font-size: $font-2xl;
+  font-weight: $font-medium;
+  margin-bottom: 16px;
+  max-width: 328px;
+}
+
+.benefitsList {
+  gap: 12px;
+}
+
+.benefitItem {
+  font-size: $font-base;
+  padding-left: 24px;
+  position: relative;
+
+  // @include mobile {
+  //   font-size: $font-sm;
+  //   padding-left: $spacing-5;
+  // }
+
+  &::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: $font-bold;
+  }
+}

@@ -1,0 +1,15 @@
+.FormField{
+    margin-bottom: 24px;
+}
+
+.agreements {
+    margin-top: -4px;
+}
+
+.submitButton {
+    margin-top: 20px;
+
+    @include md {
+        margin-top: 40px;
+    }
+}

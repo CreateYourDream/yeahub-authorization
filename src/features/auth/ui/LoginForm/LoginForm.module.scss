@@ -1,0 +1,19 @@
+.emailField {
+    margin-bottom: 16px;
+}
+
+.forgotLink {
+    font-size: $font-sm;
+    color: $purple-700;
+    margin-top: 6px;
+    display: block;
+    text-align: right;
+}
+
+.submitButton {
+    margin-top: 20px;
+
+    @include md {
+        margin-top: 40px;
+    }
+}

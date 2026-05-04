@@ -1,0 +1,76 @@
+.sidebar {
+  background-color: $white-900;
+  border-right: 1px solid $black-50;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarTop {
+  margin-bottom: 32px;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  height: 38px;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: $radius-lg;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  text-align: left;
+  color: $black-700;
+  font-size: $font-sm;
+  transition: background-color $transition-fast;
+  cursor: pointer;
+}
+
+.active {
+  background-color: $purple-100;
+  color: $purple-700;
+}
+
+.icon {
+  width: 16px;
+  color: inherit;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+
+.sidebarActions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.actionButton {
+  height: 42px;
+  border-radius: $radius-lg;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-sm;
+  font-weight: $font-medium;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.supportButton {
+  background-color: $purple-700;
+  color: $white-900;
+}
+

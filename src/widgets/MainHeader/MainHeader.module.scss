@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.settingsButton,
+.avatarButton {
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-full;
+  border: 1px solid $black-100;
+  background-color: $white-900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-sm;
+}
+
+.avatarButton {
+  background-color: $yellow-800;
+  color: $black-900;
+  font-weight: $font-bold;
+}
