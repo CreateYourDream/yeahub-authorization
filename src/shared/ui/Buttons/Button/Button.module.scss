@@ -1,0 +1,40 @@
+.button {
+  width: 100%;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: $radius-xl;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: $font-base;
+}
+
+.primary {
+  color: white;
+  background-color: $purple-700;
+  border: none;
+}
+
+.primary:hover:not(:disabled) {
+  background-color: $purple-500;
+}
+
+.primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+.primary:disabled {
+  background-color: #a0c0e8;
+  cursor: not-allowed;
+}
+
+.logout {
+  background-color: $white-900;
+  color: $red-600;
+  border: 1px solid $red-300;
+}
+
+.logout:hover:not(:disabled) {
+  background-color: $red-200;
+  transition: background-color $transition-fast;
+}

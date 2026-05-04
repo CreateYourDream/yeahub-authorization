@@ -1,0 +1,9 @@
+export { default as FacebookIcon } from '@shared/assets/icons/facebook-icon.svg?react'; 
+export { default as GoogleIcon } from '@shared/assets/icons/google-icon.svg?react'; 
+export { default as TelegramIcon } from '@shared/assets/icons/telegram-icon.svg?react';
+export { default as HouseIcon } from '@shared/assets/icons/house-icon.svg?react';
+export { default as UsersIcon } from '@shared/assets/icons/users-icon.svg?react';
+export { default as UserIcon } from '@shared/assets/icons/user-icon.svg?react';
+export { default as BookIcon } from '@shared/assets/icons/book-icon.svg?react';
+export { default as BlogIcon } from '@shared/assets/icons/blog-icon.svg?react';
+export { default as CogIcon } from '@shared/assets/icons/cog-icon.svg?react';

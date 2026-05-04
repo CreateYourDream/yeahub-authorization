@@ -1,0 +1,27 @@
+.logo {
+  --logo-url: url('@/shared/assets/icons/logo-dark.svg');
+  width: 144px;
+  height: 33px;
+  display: block;
+  background-image: var(--logo-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include md {
+    --logo-url: url('@/shared/assets/icons/logo-light.svg');
+  }
+
+  &[data-color="dark"] {
+    --logo-url: url('@/shared/assets/icons/logo-dark.svg')
+  }
+
+  &[data-color="light"] {
+    --logo-url: url('@/shared/assets/icons/logo-light.svg')
+  }
+
+  @include lg {
+    width: 190px;
+    height: 45px;
+  }
+}

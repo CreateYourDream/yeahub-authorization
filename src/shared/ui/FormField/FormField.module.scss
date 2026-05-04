@@ -1,0 +1,12 @@
+.formLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: $font-sm;
+}
+
+.errorText {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: $red-700;
+}

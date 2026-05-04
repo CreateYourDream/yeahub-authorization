@@ -1,0 +1,33 @@
+.eyeIcon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: $black-400;
+    cursor: pointer;
+    @include flex-center;
+    @include md{
+        padding: 12px;
+    }
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+}
+
+.error {
+    background-color: $red-700;
+}
+
+.showIcon {
+    mask-image: url('@/shared/assets/icons/eye-open.svg');
+    -webkit-mask-image: url('@/shared/assets/icons/eye-open.svg');
+}
+
+.hideIcon {
+    mask-image: url('@/shared/assets/icons/eye-close.svg');
+    -webkit-mask-image: url('@/shared/assets/icons/eye-close.svg');
+}
