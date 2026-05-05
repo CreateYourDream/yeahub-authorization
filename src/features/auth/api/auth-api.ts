@@ -62,7 +62,6 @@ export const authApi = baseApi.injectEndpoints({
             onQueryStarted: async (_, { queryFulfilled, dispatch }) => {
                 try {
                     const result = await queryFulfilled;
-                    console.log('refresh', result.data.user);
                     dispatch(login({ token: result.data.access_token }))
                     dispatch(setUser(result.data.user))
                 } catch (error) {

@@ -16,6 +16,21 @@ const UserPage = lazy(() =>
 const HomePage = lazy(() =>
   import("@pages/HomePage").then((module) => ({ default: module.HomePage })),
 );
+const LearningPage = lazy(() =>
+  import("@pages/LearningPage").then((module) => ({ default: module.LearningPage })),
+);
+const BlogPage = lazy(() =>
+  import("@pages/BlogPage").then((module) => ({ default: module.BlogPage })),
+);
+const MentorsPage = lazy(() =>
+  import("@pages/MentorsPage").then((module) => ({ default: module.MentorsPage })),
+);
+const ForgotPasswordPage = lazy(() =>
+  import("@pages/ForgotPasswordPage/index").then((module) => ({ default: module.ForgotPasswordPage })),
+);
+const NotFoundPage = lazy(() =>
+  import("@pages/NotFoundPage").then((module) => ({ default: module.NotFoundPage })),
+);
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +42,9 @@ export const router = createBrowserRouter([
           { index: true, element: <Navigate to="/home" replace /> },
           { path: '/user', element: <UserPage /> },
           { path: '/home', element: <HomePage /> },
+          { path: '/learning', element: <LearningPage /> },
+          { path: '/blog', element: <BlogPage /> },
+          { path: '/mentors', element: <MentorsPage /> },
         ]
       },
     ],
@@ -39,8 +57,13 @@ export const router = createBrowserRouter([
         children: [
           { path: '/login', element: <LoginPage /> },
           { path: '/register', element: <RegisterPage /> },
+          { path: '/forgot-password', element: <ForgotPasswordPage /> },
         ],
       },
     ],
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
   },
 ])

@@ -18,6 +18,3 @@ export type RegisterResponse = {
     access_token: string;
     user: User;
 };
-export type RefreshTokenCredentials = {
-    refresh_token: string;
-};

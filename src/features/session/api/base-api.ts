@@ -4,8 +4,10 @@ import { login, logout } from "@/features/auth/model";
 import type { Token } from "@/features/auth/model/type";
 import type { User } from "@/entities/user";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://api.yeatwork.ru/";
+
 const baseQuery = fetchBaseQuery({
-  baseUrl: "https://api.yeatwork.ru/",
+  baseUrl: API_BASE_URL,
   credentials: "include",
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as { auth: { token: string | null } }).auth.token;
