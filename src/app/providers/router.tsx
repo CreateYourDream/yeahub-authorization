@@ -26,7 +26,7 @@ const MentorsPage = lazy(() =>
   import("@pages/MentorsPage").then((module) => ({ default: module.MentorsPage })),
 );
 const ForgotPasswordPage = lazy(() =>
-  import("@pages/ForgotPasswordPage/index").then((module) => ({ default: module.ForgotPasswordPage })),
+  import("@pages/ForgotPasswordPage").then((module) => ({ default: module.ForgotPasswordPage })),
 );
 const NotFoundPage = lazy(() =>
   import("@pages/NotFoundPage").then((module) => ({ default: module.NotFoundPage })),
@@ -35,6 +35,7 @@ const NotFoundPage = lazy(() =>
 export const router = createBrowserRouter([
   {
     element: <AuthProvider />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         path: '/', element: <MainLayout />,
@@ -51,6 +52,7 @@ export const router = createBrowserRouter([
   },
   {
     element: <GuestProvider />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         element: <AuthLayout />,

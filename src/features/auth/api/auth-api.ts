@@ -3,6 +3,7 @@ import type { ExtraArgument } from "@/app/store/types";
 import { logout, login } from "@/features/auth/model";
 import type { LoginCredentials, Response, RegisterCredentials, RegisterResponse } from "./type";
 import { clearUser, setUser } from "@/entities/user";
+import { logger } from "@/shared/lib/logger";
 
 export const authApi = baseApi.injectEndpoints({
     endpoints: (build) => ({
@@ -34,7 +35,7 @@ export const authApi = baseApi.injectEndpoints({
                     dispatch(login({ token: data.access_token }))
                     dispatch(setUser(data.user))
                 } catch (error) {
-                    console.error('Error registering:', error);
+                    logger.error("Error registering", error);
                 }
             },
         }),
@@ -51,7 +52,7 @@ export const authApi = baseApi.injectEndpoints({
                     dispatch(baseApi.util.resetApiState());
                     typedExtra.navigate('/login');
                 } catch (error) {
-                    console.error('Error logging out:', error);
+                    logger.error("Error logging out", error);
                 }
             },
         }),

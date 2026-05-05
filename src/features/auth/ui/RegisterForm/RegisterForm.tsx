@@ -10,6 +10,7 @@ import { confirmPasswordValidation, emailValidation, nicknameValidation, passwor
 import { FormPasswordField } from '@/shared/ui/FormPasswordField';
 import { RegisterAgreements } from '@/features/auth/ui/RegisterAgreements';
 import type { RegisterFormData } from './types';
+import { logger } from '@/shared/lib/logger';
 
 export const RegisterForm = () => {
   const [registerUser, { isLoading, error: registerError }] = useRegisterMutation();
@@ -36,7 +37,7 @@ export const RegisterForm = () => {
       dispatch(login({ token: response.access_token }));
 
     } catch (error) {
-      console.error('Ошибка регистрации:', error);
+      logger.error('Ошибка регистрации', error);
     }
   };
 
