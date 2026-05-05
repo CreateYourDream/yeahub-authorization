@@ -2,8 +2,6 @@ import { Button } from '@/shared/ui/Buttons/Button';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { FormField } from '@/shared/ui/FormField';
 import { useRegisterMutation } from '@/features/auth/api/auth-api';
-import { useAppDispatch } from '@/app/store/hooks';
-import { login } from '@/features/auth/model/authSlice';
 import { ErrorMessage } from '@/shared/ui/ErrorMessage';
 import styles from './RegisterForm.module.scss';
 import { confirmPasswordValidation, emailValidation, nicknameValidation, passwordValidation } from '@/features/auth/lib';
@@ -14,8 +12,6 @@ import { logger } from '@/shared/lib/logger';
 
 export const RegisterForm = () => {
   const [registerUser, { isLoading, error: registerError }] = useRegisterMutation();
-
-  const dispatch = useAppDispatch();
 
   const { register, handleSubmit, watch, formState: { errors, isValid } } = useForm<RegisterFormData>({
     mode: 'onChange',
@@ -29,13 +25,11 @@ export const RegisterForm = () => {
 
   const submitHandler: SubmitHandler<RegisterFormData> = async (data) => {
     try {
-      const response = await registerUser({
+      await registerUser({
         username: data.username,
         email: data.email,
         password: data.password,
       }).unwrap();
-      dispatch(login({ token: response.access_token }));
-
     } catch (error) {
       logger.error('Ошибка регистрации', error);
     }

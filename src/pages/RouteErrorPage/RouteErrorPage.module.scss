@@ -1,0 +1,48 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 442px;
+  padding: 28px 24px;
+  border-radius: $radius-2xl;
+  background-color: $white-900;
+  border: 1px solid $black-100;
+}
+
+.code {
+  color: $purple-700;
+  font-size: $font-sm;
+  font-weight: $font-semibold;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: $font-2xl;
+  font-weight: $font-medium;
+  margin-bottom: 12px;
+}
+
+.description {
+  color: $black-500;
+  margin-bottom: 24px;
+}
+
+.primaryAction {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: $radius-xl;
+  background-color: $purple-700;
+  color: $white-900;
+  text-align: center;
+  cursor: pointer;
+  font-size: $font-sm;
+  font-weight: $font-medium;
+  transition: background-color $transition-fast;
+}

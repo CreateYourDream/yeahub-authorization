@@ -31,11 +31,14 @@ const ForgotPasswordPage = lazy(() =>
 const NotFoundPage = lazy(() =>
   import("@pages/NotFoundPage").then((module) => ({ default: module.NotFoundPage })),
 );
+const RouteErrorPage = lazy(() =>
+  import("@pages/RouteErrorPage").then((module) => ({ default: module.RouteErrorPage })),
+);
 
 export const router = createBrowserRouter([
   {
     element: <AuthProvider />,
-    errorElement: <NotFoundPage />,
+    errorElement: <RouteErrorPage />,
     children: [
       {
         path: '/', element: <MainLayout />,
@@ -52,7 +55,7 @@ export const router = createBrowserRouter([
   },
   {
     element: <GuestProvider />,
-    errorElement: <NotFoundPage />,
+    errorElement: <RouteErrorPage />,
     children: [
       {
         element: <AuthLayout />,
